@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CIGRE European Low Voltage Residential Network &#8212; pydae-bmapu</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/cigre_eu_lv_res/cigre_eu_lv_res';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="CIGRE European Low Voltage Industrial Network" href="../cigre_eu_lv_ind/cigre_eu_lv_ind.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_bmapu.png" class="logo__image only-light" alt="pydae-bmapu - Home"/>
+    <script>document.write(`<img src="../../_static/logo_bmapu.png" class="logo__image only-dark" alt="pydae-bmapu - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to pydae-bmapu
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../models.html">Models</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../buses/buses.html">Buses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lines/lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../trafos/transformers.html">Transformers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loads/loads.html">Loads</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vscs.html">VSCs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vscs/dcdc_gfh.html">DC-DC converter GFH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vscs/dcdc_gfl.html">DC-DC converter GFL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vscs/ac_3p_4w.html">VSC with coupling inductor</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vsgs.html">VSGs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vsgs/gfpizv.html">PI based VSG</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../esss/esss.html">ESSs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../esss/bess_dcdc.html">BESS with DC/DC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../esss/bess_dcac.html">BESS with DC/AC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../esss/bess.html">BESS</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../examples.html">Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../cigre_eu_lv_ind/cigre_eu_lv_ind.html">CIGRE European Low Voltage Industrial Network</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">CIGRE European Low Voltage Residential Network</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/pydae/pydae-bmapu-doc" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pydae/pydae-bmapu-doc/issues/new?title=Issue%20on%20page%20%2Fexamples/cigre_eu_lv_res/cigre_eu_lv_res.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/examples/cigre_eu_lv_res/cigre_eu_lv_res.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>CIGRE European Low Voltage Residential Network</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cigre-european-low-voltage-residential-network">
+<h1>CIGRE European Low Voltage Residential Network<a class="headerlink" href="#cigre-european-low-voltage-residential-network" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span><span class="n">SVG</span>
+<span class="n">SVG</span><span class="p">(</span><span class="s1">&#39;./cigre_eu_lv_res_tooltips.svg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4e774e14847ea2d42af7643295038970fbff20aec708cdeeb14905c7cb80f390.svg" src="../../_images/4e774e14847ea2d42af7643295038970fbff20aec708cdeeb14905c7cb80f390.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pydae.urisi.utils</span> <span class="kn">import</span> <span class="n">report_v</span><span class="p">,</span><span class="n">get_v</span><span class="p">,</span><span class="n">get_i</span><span class="p">,</span><span class="n">get_power</span>
+<span class="kn">from</span> <span class="nn">pydae.urisi.lines</span> <span class="kn">import</span> <span class="n">change_line</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">pydae.svg_tools</span> <span class="kn">import</span> <span class="n">svg</span><span class="p">,</span><span class="n">grid2svg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cigre_eu_lv_res</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">cigre_eu_lv_res</span><span class="o">.</span><span class="n">model</span><span class="p">()</span>
+
+<span class="n">p_load</span><span class="p">,</span><span class="n">q_load</span> <span class="o">=</span> <span class="mf">50e3</span><span class="p">,</span><span class="mf">10e3</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;p_load_R18_a&#39;</span><span class="p">:</span><span class="n">p_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;q_load_R18_a&#39;</span><span class="p">:</span><span class="n">q_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span>
+          <span class="s1">&#39;p_load_R18_b&#39;</span><span class="p">:</span><span class="n">p_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;q_load_R18_b&#39;</span><span class="p">:</span><span class="n">q_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span>
+          <span class="s1">&#39;p_load_R18_c&#39;</span><span class="p">:</span><span class="n">p_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;q_load_R18_c&#39;</span><span class="p">:</span><span class="n">q_load</span><span class="o">/</span><span class="mi">3</span><span class="p">}</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">ini</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="s1">&#39;xy_0.json&#39;</span><span class="p">)</span>
+<span class="n">report_v</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s1">&#39;cigre_eu_lv_res.hjson&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V_R00_an: 11546.5|   -0.0º V,    V_R00_ag: 11546.5|   -0.0º V,    V_1 = 11546.5 V, unb = 0.00%
+V_R00_bn: 11546.5| -120.0º V,    V_R00_bg: 11546.5| -120.0º V,    V_2 =     0.0 V
+V_R00_cn: 11546.5|  120.0º V,    V_R00_cg: 11546.5|  120.0º V,    v_0 =     0.0 V
+  V_R00_ng:      0.0|      0.0º V
+V_R01_an:   226.6|  -31.7º V,    V_R01_ag:   226.2|  -31.7º V,    V_1 =   226.6 V, unb = 0.02%
+V_R01_bn:   226.6| -151.7º V,    V_R01_bg:   226.4| -151.9º V,    V_2 =     0.0 V
+V_R01_cn:   226.6|   88.3º V,    V_R01_cg:   227.1|   88.3º V,    v_0 =     0.5 V
+  V_R01_ng:      0.5|    104.1º V
+V_R02_an:   224.1|  -31.8º V,    V_R02_ag:   223.9|  -31.7º V,    V_1 =   224.6 V, unb = 0.42%
+V_R02_bn:   224.5| -151.9º V,    V_R02_bg:   224.4| -151.9º V,    V_2 =     0.2 V
+V_R02_cn:   225.1|   88.2º V,    V_R02_cg:   225.3|   88.2º V,    v_0 =     0.6 V
+  V_R02_ng:      0.2|    104.7º V
+V_R03_an:   221.7|  -31.8º V,    V_R03_ag:   221.7|  -31.8º V,    V_1 =   222.5 V, unb = 0.83%
+V_R03_bn:   222.4| -152.0º V,    V_R03_bg:   222.4| -152.0º V,    V_2 =     0.4 V
+V_R03_cn:   223.5|   88.1º V,    V_R03_cg:   223.5|   88.1º V,    v_0 =     0.7 V
+  V_R03_ng:      0.0|    -84.8º V
+V_R04_an:   219.4|  -31.9º V,    V_R04_ag:   219.6|  -31.9º V,    V_1 =   220.7 V, unb = 1.22%
+V_R04_bn:   220.5| -152.1º V,    V_R04_bg:   220.6| -152.1º V,    V_2 =     0.5 V
+V_R04_cn:   222.1|   88.0º V,    V_R04_cg:   221.8|   88.0º V,    v_0 =     0.8 V
+  V_R04_ng:      0.3|    -77.4º V
+V_R05_an:   217.7|  -31.9º V,    V_R05_ag:   218.1|  -32.0º V,    V_1 =   219.3 V, unb = 1.51%
+V_R05_bn:   219.1| -152.2º V,    V_R05_bg:   219.3| -152.1º V,    V_2 =     0.7 V
+V_R05_cn:   221.0|   87.9º V,    V_R05_cg:   220.6|   87.9º V,    v_0 =     0.8 V
+  V_R05_ng:      0.5|    -76.7º V
+V_R06_an:   216.1|  -31.9º V,    V_R06_ag:   216.5|  -32.1º V,    V_1 =   217.9 V, unb = 1.80%
+V_R06_bn:   217.7| -152.3º V,    V_R06_bg:   217.9| -152.2º V,    V_2 =     0.8 V
+V_R06_cn:   220.0|   87.9º V,    V_R06_cg:   219.4|   87.8º V,    v_0 =     0.9 V
+  V_R06_ng:      0.7|    -76.5º V
+V_R07_an:   215.1|  -32.0º V,    V_R07_ag:   215.6|  -32.1º V,    V_1 =   217.1 V, unb = 1.99%
+V_R07_bn:   216.9| -152.4º V,    V_R07_bg:   217.1| -152.2º V,    V_2 =     0.9 V
+V_R07_cn:   219.4|   87.8º V,    V_R07_cg:   218.6|   87.7º V,    v_0 =     0.9 V
+  V_R07_ng:      0.8|    -76.1º V
+V_R08_an:   214.0|  -32.0º V,    V_R08_ag:   214.7|  -32.1º V,    V_1 =   216.3 V, unb = 2.17%
+V_R08_bn:   216.1| -152.5º V,    V_R08_bg:   216.3| -152.2º V,    V_2 =     0.9 V
+V_R08_cn:   218.7|   87.8º V,    V_R08_cg:   217.9|   87.7º V,    v_0 =     1.0 V
+  V_R08_ng:      0.9|    -75.9º V
+V_R09_an:   213.0|  -32.0º V,    V_R09_ag:   213.7|  -32.2º V,    V_1 =   215.5 V, unb = 2.36%
+V_R09_bn:   215.2| -152.5º V,    V_R09_bg:   215.4| -152.3º V,    V_2 =     1.0 V
+V_R09_cn:   218.1|   87.7º V,    V_R09_cg:   217.2|   87.6º V,    v_0 =     1.0 V
+  V_R09_ng:      1.0|    -75.7º V
+V_R10_an:   212.4|  -32.0º V,    V_R10_ag:   213.2|  -32.2º V,    V_1 =   215.0 V, unb = 2.48%
+V_R10_bn:   214.7| -152.6º V,    V_R10_bg:   215.0| -152.3º V,    V_2 =     1.0 V
+V_R10_cn:   217.7|   87.7º V,    V_R10_cg:   216.7|   87.6º V,    v_0 =     1.0 V
+  V_R10_ng:      1.1|    -75.4º V
+V_R11_an:   221.0|  -31.8º V,    V_R11_ag:   221.0|  -31.8º V,    V_1 =   221.9 V, unb = 0.86%
+V_R11_bn:   221.8| -152.0º V,    V_R11_bg:   221.8| -152.0º V,    V_2 =     0.4 V
+V_R11_cn:   222.9|   88.1º V,    V_R11_cg:   222.9|   88.1º V,    v_0 =     0.7 V
+  V_R11_ng:      0.1|    -82.3º V
+V_R12_an:   216.9|  -31.7º V,    V_R12_ag:   217.2|  -31.8º V,    V_1 =   218.3 V, unb = 1.37%
+V_R12_bn:   218.2| -152.0º V,    V_R12_bg:   218.3| -151.9º V,    V_2 =     0.6 V
+V_R12_cn:   219.9|   88.1º V,    V_R12_cg:   219.5|   88.1º V,    v_0 =     0.8 V
+  V_R12_ng:      0.4|    -76.9º V
+V_R13_an:   214.5|  -31.6º V,    V_R13_ag:   214.8|  -31.7º V,    V_1 =   216.0 V, unb = 1.52%
+V_R13_bn:   215.9| -151.9º V,    V_R13_bg:   216.0| -151.8º V,    V_2 =     0.6 V
+V_R13_cn:   217.7|   88.2º V,    V_R13_cg:   217.3|   88.2º V,    v_0 =     0.8 V
+  V_R13_ng:      0.5|    -76.6º V
+V_R14_an:   212.0|  -31.4º V,    V_R14_ag:   212.4|  -31.5º V,    V_1 =   213.7 V, unb = 1.67%
+V_R14_bn:   213.5| -151.8º V,    V_R14_bg:   213.7| -151.7º V,    V_2 =     0.7 V
+V_R14_cn:   215.6|   88.4º V,    V_R14_cg:   215.1|   88.3º V,    v_0 =     0.9 V
+  V_R14_ng:      0.5|    -76.4º V
+V_R15_an:   209.6|  -31.3º V,    V_R15_ag:   210.0|  -31.4º V,    V_1 =   211.4 V, unb = 1.83%
+V_R15_bn:   211.2| -151.7º V,    V_R15_bg:   211.3| -151.5º V,    V_2 =     0.8 V
+V_R15_cn:   213.4|   88.5º V,    V_R15_cg:   212.8|   88.5º V,    v_0 =     0.9 V
+  V_R15_ng:      0.6|    -76.2º V
+V_R16_an:   213.9|  -31.8º V,    V_R16_ag:   214.4|  -31.9º V,    V_1 =   215.9 V, unb = 1.94%
+V_R16_bn:   215.7| -152.2º V,    V_R16_bg:   215.9| -152.0º V,    V_2 =     0.8 V
+V_R16_cn:   218.1|   88.0º V,    V_R16_cg:   217.4|   87.9º V,    v_0 =     0.9 V
+  V_R16_ng:      0.7|    -76.4º V
+V_R17_an:   211.6|  -31.9º V,    V_R17_ag:   212.4|  -32.1º V,    V_1 =   214.1 V, unb = 2.46%
+V_R17_bn:   213.9| -152.5º V,    V_R17_bg:   214.1| -152.2º V,    V_2 =     1.0 V
+V_R17_cn:   216.9|   87.8º V,    V_R17_cg:   215.9|   87.7º V,    v_0 =     1.0 V
+  V_R17_ng:      1.0|    -75.6º V
+V_R18_an:   210.3|  -32.0º V,    V_R18_ag:   211.2|  -32.2º V,    V_1 =   213.0 V, unb = 2.63%
+V_R18_bn:   212.8| -152.6º V,    V_R18_bg:   213.0| -152.3º V,    V_2 =     1.1 V
+V_R18_cn:   215.9|   87.7º V,    V_R18_cg:   214.8|   87.6º V,    v_0 =     1.1 V
+  V_R18_ng:      1.1|    -74.9º V
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">svg</span><span class="p">(</span><span class="s1">&#39;./cigre_eu_lv_res.svg&#39;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_grid</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s1">&#39;cigre_eu_lv_res.hjson&#39;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_tooltips</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;./cigre_eu_lv_res_results.svg&#39;</span><span class="p">)</span>    
+
+<span class="n">SVG</span><span class="p">(</span><span class="s1">&#39;./cigre_eu_lv_res_results.svg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/085b1841583d7c0cad7f3a05d92467c2fe55a96cc70ccc527b2bfac67be639f3.svg" src="../../_images/085b1841583d7c0cad7f3a05d92467c2fe55a96cc70ccc527b2bfac67be639f3.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">V</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">p_R18</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">50e3</span><span class="p">,</span><span class="o">-</span><span class="mf">50e3</span><span class="p">,</span> <span class="o">-</span><span class="mf">10e3</span><span class="p">):</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">cigre_eu_lv_res</span><span class="o">.</span><span class="n">model</span><span class="p">()</span>
+
+    <span class="n">q_R18</span> <span class="o">=</span> <span class="n">p_R18</span><span class="o">*</span><span class="mf">0.2</span>
+    <span class="n">p_load</span><span class="p">,</span><span class="n">q_load</span> <span class="o">=</span> <span class="n">p_R18</span><span class="p">,</span><span class="n">q_R18</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;p_load_R18_a&#39;</span><span class="p">:</span><span class="n">p_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;q_load_R18_a&#39;</span><span class="p">:</span><span class="n">q_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;p_load_R18_b&#39;</span><span class="p">:</span><span class="n">p_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;q_load_R18_b&#39;</span><span class="p">:</span><span class="n">q_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;p_load_R18_c&#39;</span><span class="p">:</span><span class="n">p_load</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;q_load_R18_c&#39;</span><span class="p">:</span><span class="n">q_load</span><span class="o">/</span><span class="mi">3</span><span class="p">}</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">ini</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="s1">&#39;xy_0.json&#39;</span><span class="p">)</span>
+    <span class="n">V_R18</span> <span class="o">=</span> <span class="n">get_v</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s1">&#39;R18&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Power = </span><span class="si">{</span><span class="o">-</span><span class="n">p_R18</span><span class="o">/</span><span class="mf">1e3</span><span class="si">:</span><span class="s2">5.1f</span><span class="si">}</span><span class="s2"> kW, Voltage = </span><span class="si">{</span><span class="n">V_R18</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2"> V&quot;</span><span class="p">)</span>
+    <span class="n">P</span> <span class="o">+=</span> <span class="p">[</span><span class="n">p_R18</span><span class="p">]</span>
+    <span class="n">V</span> <span class="o">+=</span> <span class="p">[</span><span class="n">V_R18</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Power = -50.0 kW, Voltage = 210.3 V
+Power = -40.0 kW, Voltage = 212.0 V
+Power = -30.0 kW, Voltage = 213.7 V
+Power = -20.0 kW, Voltage = 215.3 V
+Power = -10.0 kW, Voltage = 217.0 V
+Power =  -0.0 kW, Voltage = 218.5 V
+Power =  10.0 kW, Voltage = 220.1 V
+Power =  20.0 kW, Voltage = 221.6 V
+Power =  30.0 kW, Voltage = 223.2 V
+Power =  40.0 kW, Voltage = 224.7 V
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;$V_</span><span class="se">{{</span><span class="s1">R18</span><span class="se">}}</span><span class="s1">$&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/a3258804ca91518ec055bcf125cdd53dfee28967027fef6647fe2c3356ba23cf.png" src="../../_images/a3258804ca91518ec055bcf125cdd53dfee28967027fef6647fe2c3356ba23cf.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./examples\cigre_eu_lv_res"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../cigre_eu_lv_ind/cigre_eu_lv_ind.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CIGRE European Low Voltage Industrial Network</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Juan Manuel Mauricio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
