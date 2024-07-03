@@ -29,7 +29,7 @@ $$
 \end{align}
 $$
 
-### Example input
+## Example input
 
 ```{code} 
 ...

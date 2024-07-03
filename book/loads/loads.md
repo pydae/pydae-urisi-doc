@@ -3,29 +3,49 @@
 
 Loads.
 
-```{figure} loads.svg
+```{figure} loads_v2.svg
 :height: 250px
-:name: gfpizv
-
-Loads
+:name: fig_loads
 ```
 
+## Typical 3 phase load with neutral
 
 ```{code} 
-
-   "loads":[
-            {"bus": "Bus_2" , "kVA": 50.0, "pf": 0.85,"type":"1P+N","bus_nodes": [1,4]},
-            {"bus": "Bus_2" , "kVA": 30.0, "pf": 0.85,"type":"1P+N","bus_nodes": [2,4]},
-            {"bus": "Bus_2" , "kVA": 20.0, "pf": 0.85,"type":"1P+N","bus_nodes": [3,4]}
+    { bus: "I02" , kVA: 100.0, pf: 0.85, type:"3P+N", model:"ZIP"}
 ```
 
-where:
 
-* ``"bus"``: name of the bus
-* ``"bus_nodes"``: list of nodes where the load is connected
-* ``"type"``: available types are:
-  - ``"3P+N"``: three phase load with neutral
-  - ``"3P"``: three phase load without neutral
-  - ``"1P+N"``: single phase load connected between one phase and other or neutral
-* ``"kVA"``: aparent power (kW)
-* ``"pf"``: load power factor
+
+## Typical DC load 
+
+```{code} 
+   {"bus": "S15", "kW": 30.0, "type":"DC","model":"ZIP"}
+```
+
+
+
+
+## Parameters
+
+
+| Data            | Description                                         |  Units       |
+| :----------     | :-------------------------------------------------- |:---------:   |  
+| ``bus``         | Bus name                                            | -            |
+| ``kVA``         | Apparent power                                      | kVA          |
+| ``pf``          | Power factor                                        | -            |
+| ``type``        | See load type section                               | -            |
+| ``model``       | See load type section                               | -            |
+
+
+## Load type
+
+In ``type`` it is posisble to introduce the following options:
+
+- ``3P+N``: Three phase with neutral. Active and reactive powers can be different for each phase.
+- ``3P``: Three phase without neutral. Only three phase total active and reactive powers can be defined. The sum of phasorial currents is zero.
+- ``DC``: DC load.
+
+## Load model
+
+ZIP (Impedance+Current+Power) loads. 
+

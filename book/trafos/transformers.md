@@ -1,7 +1,33 @@
 (trafos_)=
 # Transformers
 
-## Dyn11
+```{code} 
+{"bus_j": "1",  "bus_k": "2",  "S_n_kVA": 1000.0, "U_j_kV":20, "U_k_kV":0.4,
+ "R_cc_pu": 0.01, "X_cc_pu":0.04, "connection": "Dyn11", 
+ "conductors_j":3, "conductors_k":4, monitor:true}
+```
+
+
+## Parameters
+
+
+| Data            | Description                                         |  Units       |
+| :----------     | :-------------------------------------------------- |:---------:   |  
+| ``bus_j``       | From bus name                                       | -            |
+| ``bus_k``       | To bus name                                         | -            |
+| ``S_n_kVA``     | Nominal power                                       | kVA          |
+| ``U_j_kV``      | Bus j side nominal voltage                          | kV           |
+| ``U_k_kV``      | Bus k side nominal voltage                          | kV           |
+| ``R_cc``        | Short circuit resistance in per unit (machine base) | pu-m         | 
+| ``X_cc``        | Short circuit reactance in per unit (machine base)  | pu-m         | 
+| ``connection``  | See transformer connections section                 | True/False   | 
+| ``conductors_j``| See line bus nodes section                          | True/False   | 
+| ``conductors_k``| See line bus nodes section                          | True/False   | 
+
+
+## Transformer connections
+
+### Dyn11
 
 ```{figure} Dyn11.svg
 :height: 150px
@@ -23,7 +49,7 @@ Transformers are modeled as in [T1]_.
 ```
 
 
-## Dyn1
+### Dyn1
  
 ```{figure} Dyn1.svg
 :height: 150px
@@ -41,7 +67,7 @@ Transformers are modeled as in [T1]_.
 ```
 
 
-## Ygd11_3w
+### Ygd11_3w
 
 ```{figure} Ygd11_3w.svg
 :height: 150px
@@ -58,18 +84,14 @@ Transformers are modeled as in [T1]_.
       ],
 ```
 
-where:
 
-* ``"bus_j"``: name of the j bus
-* ``"bus_k"``: name of the k bus
-* ``"pos_x"``: x position of the bus
-* ``"pos_y"``: y position of the bus
-* ``"S_n_kVA"``: based power in kVA
-* ``"U_j_kV"``: HV side nominal RMS phase-phase voltage in kV
-* ``"U_k_kV"``: LV side nominal RMS phase-phase voltage in kV
-* ``"connection"``: connection type (see available connections)
-* ``"conductors_j"``: HV side conductors
-* ``"conductors_k"``: LV side conductors
+...[T1] Dugan, R. C., & Santoso, S. (2003). An example of 3-phase transformer modeling for distribution system analysis. 2003 IEEE PES Transmission and Distribution Conference and Exposition (IEEE Cat. No.03CH37495), 3, 1028–1032. https://doi.org/10.1109/TDC.2003.1335084
 
 
-.. [T1] Dugan, R. C., & Santoso, S. (2003). An example of 3-phase transformer modeling for distribution system analysis. 2003 IEEE PES Transmission and Distribution Conference and Exposition (IEEE Cat. No.03CH37495), 3, 1028–1032. https://doi.org/10.1109/TDC.2003.1335084
+
+Here is an example citation to a paper by Doe {cite}`holdgraf_evidence_2014`.
+
+
+## References
+
+```{bibliography}

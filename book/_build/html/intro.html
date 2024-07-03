@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to pydae-bmapu &#8212; pydae-bmapu</title>
+    <title>Welcome to pydae-urisi &#8212; pydae-bmapu</title>
   
   
   
@@ -52,7 +52,7 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -178,7 +178,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to pydae-bmapu
+                    Welcome to pydae-urisi
                 </a>
             </li>
         </ul>
@@ -394,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to pydae-bmapu</h1>
+    <h1>Welcome to pydae-urisi</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -408,9 +408,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-pydae-bmapu">
-<h1>Welcome to pydae-bmapu<a class="headerlink" href="#welcome-to-pydae-bmapu" title="Link to this heading">#</a></h1>
-<p>Power system analysis and simulation using pydae.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-pydae-urisi">
+<h1>Welcome to pydae-urisi<a class="headerlink" href="#welcome-to-pydae-urisi" title="Link to this heading">#</a></h1>
+<p>Unbalanced power system analysis and simulation using pydae.</p>
 <figure class="align-default" id="avr-ntsst1">
 <a class="reference internal image-reference" href="_images/base_system.svg"><img alt="_images/base_system.svg" height="250px" src="_images/base_system.svg" /></a>
 <figcaption>
@@ -418,12 +418,15 @@ document.write(`
 </figcaption>
 </figure>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-<span class="s2">&quot;sys&quot;</span><span class="p">:{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;smib&quot;</span><span class="p">,</span><span class="s2">&quot;S_base&quot;</span><span class="p">:</span><span class="mf">100e6</span><span class="p">,</span><span class="s2">&quot;K_p_agc&quot;</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="s2">&quot;K_i_agc&quot;</span><span class="p">:</span><span class="mf">0.0</span><span class="p">,</span><span class="s2">&quot;K_xif&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">},</span>       
+<span class="s2">&quot;system&quot;</span><span class="p">:{</span><span class="n">S_base</span><span class="p">:</span><span class="mf">1e6</span><span class="p">,</span> <span class="n">K_p_agc</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">K_i_agc</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">K_xif</span><span class="p">:</span><span class="mf">0.01</span><span class="p">},</span>       
 <span class="s2">&quot;buses&quot;</span><span class="p">:[],</span>
+<span class="s2">&quot;transformers&quot;</span><span class="p">:[],</span>
 <span class="s2">&quot;lines&quot;</span><span class="p">:[],</span>
-<span class="s2">&quot;syns&quot;</span><span class="p">:[],</span>
+<span class="s2">&quot;loads&quot;</span><span class="p">:[],</span>
+<span class="s2">&quot;shunts&quot;</span><span class="p">:[],</span>
+<span class="s2">&quot;sources&quot;</span><span class="p">:[],</span>
 <span class="s2">&quot;vscs&quot;</span><span class="p">:[],</span>
-<span class="s2">&quot;genapes&quot;</span><span class="p">:[]</span>
+<span class="s2">&quot;line_codes&quot;</span><span class="p">:{}</span>
 <span class="p">}</span>
 </pre></div>
 </div>

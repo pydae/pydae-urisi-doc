@@ -1,6 +1,6 @@
-# Welcome to pydae-bmapu
+# Welcome to pydae-urisi
 
-Power system analysis and simulation using pydae.
+Unbalanced power system analysis and simulation using pydae.
 
 
 ```{figure} ./base_system.svg
@@ -12,11 +12,14 @@ Power system in pydae
 
 ```
 data = {
-"sys":{"name":"smib","S_base":100e6,"K_p_agc":0.0,"K_i_agc":0.0,"K_xif":0.1},       
+"system":{S_base:1e6, K_p_agc:0.01, K_i_agc:0.01, K_xif:0.01},       
 "buses":[],
+"transformers":[],
 "lines":[],
-"syns":[],
+"loads":[],
+"shunts":[],
+"sources":[],
 "vscs":[],
-"genapes":[]
+"line_codes":{}
 }
 ```
