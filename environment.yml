@@ -8,6 +8,7 @@ dependencies:
   - sympy
   - matplotlib
   - numba
+  - cffi
   - voila
   - bokeh
   - nbsphinx
