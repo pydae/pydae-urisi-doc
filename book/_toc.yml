@@ -10,6 +10,7 @@ chapters:
   - file: lines/lines
   - file: trafos/transformers
   - file: loads/loads
+  - file: shunts
   - file: vscs
     sections:
     - file: vscs/dcdc_gfh

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -185,6 +185,7 @@
 <li class="toctree-l2"><a class="reference internal" href="lines.html">Lines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../trafos/transformers.html">Transformers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../loads/loads.html">Loads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shunts.html">Shunt elements</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../vscs.html">VSCs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../vscs/dcdc_gfh.html">DC-DC converter GFH</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../vscs/dcdc_gfl.html">DC-DC converter GFL</a></li>
@@ -380,7 +381,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -396,6 +399,22 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serie-impedance-sequence-parameters">Serie impedance sequence parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-coordinates">Sequence coordinates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-matrices">Primitive matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unitary-voltage-drop">Unitary voltage drop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pi-section-sequence-parameters">PI section sequence parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serie-impedance-primitives">Serie impedance primitives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">PI section sequence parameters</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -409,7 +428,7 @@ document.write(`
 sphinx-quickstart on Wed Sep  6 19:53:31 2017.
 You can adapt this file completely to your liking, but it should at least
 contain the root <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive.</p>
-<section id="line-codes">
+<section class="tex2jax_ignore mathjax_ignore" id="line-codes">
 <h1>Line codes<a class="headerlink" href="#line-codes" title="Link to this heading">#</a></h1>
 <p>Two types of lines models can be considered:</p>
 <ul class="simple">
@@ -422,10 +441,10 @@ contain the root <code class="docutils literal notranslate"><span class="pre">to
 <li><p>Primitive matrices</p></li>
 <li><p>Unitary voltage drop for p.f.= 1.0 and p.f.= 0.8</p></li>
 </ul>
-<p>Serie impedance sequence parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
-<p>Sequence coordinates
-‘’’’’’’’’’’’’’’’’’’’</p>
+<section id="serie-impedance-sequence-parameters">
+<h2>Serie impedance sequence parameters<a class="headerlink" href="#serie-impedance-sequence-parameters" title="Link to this heading">#</a></h2>
+<section id="sequence-coordinates">
+<h3>Sequence coordinates<a class="headerlink" href="#sequence-coordinates" title="Link to this heading">#</a></h3>
 <p>.. code:: python</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;line_codes&quot;:
     {&quot;mv_al_50&quot;:  {&quot;R1&quot;:0.8,    &quot;X1&quot;:	0.148, &quot;R0&quot;:0.8,   &quot;X0&quot;:	0.148},
@@ -443,8 +462,9 @@ contain the root <code class="docutils literal notranslate"><span class="pre">to
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;R0&quot;</span></code>: Zero sequence resistance (Ω/km)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;X0&quot;</span></code>: Zero sequence reactance (Ω/km)</p></li>
 </ul>
-<p>Primitive matrices
-‘’’’’’’’’’’’’’’’’’</p>
+</section>
+<section id="primitive-matrices">
+<h3>Primitive matrices<a class="headerlink" href="#primitive-matrices" title="Link to this heading">#</a></h3>
 <p>.. code:: python</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;line_codes&quot;:
   {&quot;UG1&quot;:
@@ -475,8 +495,9 @@ contain the root <code class="docutils literal notranslate"><span class="pre">to
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;R&quot;</span></code>: Resistance primitive (Ω/km)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;X&quot;</span></code>: Reactance primitive (Ω/km)</p></li>
 </ul>
-<p>Unitary voltage drop
-‘’’’’’’’’’’’’’’’’’’’</p>
+</section>
+<section id="unitary-voltage-drop">
+<h3>Unitary voltage drop<a class="headerlink" href="#unitary-voltage-drop" title="Link to this heading">#</a></h3>
 <p>.. code:: python</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;line_codes&quot;:
     {
@@ -492,8 +513,9 @@ contain the root <code class="docutils literal notranslate"><span class="pre">to
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;T_deg&quot;</span></code>: Current conductor temperature (ºC)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;alpha&quot;</span></code>: Temperature coefficient (1/ºC)</p></li>
 </ul>
-<p>PI section sequence parameters
-‘’’’’’’’’’’’’’’’’’’’’’’’’’’’’’</p>
+</section>
+<section id="pi-section-sequence-parameters">
+<h3>PI section sequence parameters<a class="headerlink" href="#pi-section-sequence-parameters" title="Link to this heading">#</a></h3>
 <p>.. code:: python</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot;line_codes&quot;:
     {
@@ -514,10 +536,12 @@ contain the root <code class="docutils literal notranslate"><span class="pre">to
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;C_1_muF&quot;</span></code>: Zero sequence resistance (µF/km)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;C_0_muF&quot;</span></code>: Zero sequence reactance  (µF/km)</p></li>
 </ul>
-<p>Serie impedance primitives
-‘’’’’’’’’’’’’’’’’’’’’’’’’’</p>
-<p>PI section sequence parameters
-‘’’’’’’’’’’’’’’’’’’’’’’’’’’’’’</p>
+</section>
+<section id="serie-impedance-primitives">
+<h3>Serie impedance primitives<a class="headerlink" href="#serie-impedance-primitives" title="Link to this heading">#</a></h3>
+</section>
+<section id="id1">
+<h3>PI section sequence parameters<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>.. code:: python</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  &quot;line_codes&quot;:
   {
@@ -540,6 +564,8 @@ contain the root <code class="docutils literal notranslate"><span class="pre">to
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;X&quot;</span></code>: Reactance primitive (Ω/km)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&quot;B_mu&quot;</span></code>: Zero sequence resistance (µ℧/km)</p></li>
 </ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -578,6 +604,29 @@ contain the root <code class="docutils literal notranslate"><span class="pre">to
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serie-impedance-sequence-parameters">Serie impedance sequence parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequence-coordinates">Sequence coordinates</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-matrices">Primitive matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unitary-voltage-drop">Unitary voltage drop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pi-section-sequence-parameters">PI section sequence parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serie-impedance-primitives">Serie impedance primitives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">PI section sequence parameters</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
   
@@ -403,11 +403,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization-and-power-flow">Initialization and power flow</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-building">Model building</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-use">Model use</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization-and-power-flow">Initialization and power flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-change">Load change</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-change">Load change</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -431,6 +435,61 @@ document.write(`
 <div class="cell_output docutils container">
 <img alt="../../_images/39c96cd270c7e9e9bd2c54f7e7df993b11cadc249f121431699f8f280bd3a19b.svg" src="../../_images/39c96cd270c7e9e9bd2c54f7e7df993b11cadc249f121431699f8f280bd3a19b.svg" /></div>
 </div>
+<section id="model-building">
+<h2>Model building<a class="headerlink" href="#model-building" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pydae.urisi.urisi_builder</span> <span class="kn">import</span> <span class="n">urisi</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s2">&quot;system&quot;</span><span class="p">:{</span><span class="s2">&quot;S_base&quot;</span><span class="p">:</span><span class="mf">1e6</span><span class="p">,</span> <span class="s2">&quot;K_p_agc&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;K_i_agc&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;K_xif&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">},</span>
+<span class="s2">&quot;buses&quot;</span><span class="p">:[</span>
+         <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MV0&quot;</span><span class="p">,</span>  <span class="s2">&quot;pos_x&quot;</span><span class="p">:</span>   <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;pos_y&quot;</span><span class="p">:</span>   <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;phi_deg_0&quot;</span><span class="p">:</span><span class="mf">30.0</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;I01&quot;</span><span class="p">,</span>  <span class="s2">&quot;pos_x&quot;</span><span class="p">:</span>  <span class="mi">90</span><span class="p">,</span> <span class="s2">&quot;pos_y&quot;</span><span class="p">:</span>   <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">0.4</span><span class="p">},</span>
+         <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;I02&quot;</span><span class="p">,</span>  <span class="s2">&quot;pos_x&quot;</span><span class="p">:</span> <span class="mi">150</span><span class="p">,</span> <span class="s2">&quot;pos_y&quot;</span><span class="p">:</span>   <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;units&quot;</span><span class="p">:</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">0.4</span><span class="p">}</span>
+        <span class="p">],</span> 
+<span class="s2">&quot;transformers&quot;</span><span class="p">:[</span>
+        <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span> <span class="s2">&quot;MV0&quot;</span><span class="p">,</span>  <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span> <span class="s2">&quot;I01&quot;</span><span class="p">,</span>  <span class="s2">&quot;S_n_kVA&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;U_j_kV&quot;</span><span class="p">:</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;U_k_kV&quot;</span><span class="p">:</span><span class="mf">0.4</span><span class="p">,</span>
+         <span class="s2">&quot;R_cc_pu&quot;</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;X_cc_pu&quot;</span><span class="p">:</span><span class="mf">0.04</span><span class="p">,</span> <span class="s2">&quot;connection&quot;</span><span class="p">:</span> <span class="s2">&quot;Dyn11&quot;</span><span class="p">,</span>   <span class="s2">&quot;conductors_j&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;conductors_k&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+         <span class="s2">&quot;monitor&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">}</span>
+       <span class="p">],</span>
+<span class="s2">&quot;lines&quot;</span><span class="p">:[</span>
+        <span class="p">{</span> <span class="s2">&quot;bus_j&quot;</span><span class="p">:</span> <span class="s2">&quot;I01&quot;</span><span class="p">,</span>  <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span> <span class="s2">&quot;I02&quot;</span><span class="p">,</span>  <span class="s2">&quot;code&quot;</span><span class="p">:</span>   <span class="s2">&quot;UG2&quot;</span><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="s2">&quot;monitor&quot;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;sym&quot;</span><span class="p">:</span><span class="kc">False</span><span class="p">}</span>
+        <span class="p">],</span>
+<span class="s2">&quot;loads&quot;</span><span class="p">:[</span>
+         <span class="p">{</span> <span class="s2">&quot;bus&quot;</span><span class="p">:</span> <span class="s2">&quot;I02&quot;</span> <span class="p">,</span> <span class="s2">&quot;kVA&quot;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span> <span class="s2">&quot;pf&quot;</span><span class="p">:</span> <span class="mf">0.85</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;3P+N&quot;</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span><span class="s2">&quot;ZIP&quot;</span><span class="p">}</span>
+        <span class="p">],</span>
+<span class="s2">&quot;shunts&quot;</span><span class="p">:[</span>
+        <span class="p">{</span><span class="s2">&quot;bus&quot;</span><span class="p">:</span> <span class="s2">&quot;I01&quot;</span> <span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span>  <span class="mf">3.0</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;bus_nodes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">]}</span>
+         <span class="p">],</span>
+<span class="s2">&quot;sources&quot;</span><span class="p">:[</span>
+       <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;ac3ph3w_ideal&quot;</span><span class="p">,</span> <span class="s2">&quot;bus&quot;</span><span class="p">:</span> <span class="s2">&quot;MV0&quot;</span><span class="p">,</span> <span class="s2">&quot;S_n&quot;</span><span class="p">:</span><span class="mf">100e3</span><span class="p">,</span> <span class="s2">&quot;U_n&quot;</span> <span class="p">:</span><span class="mf">20e3</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">}</span>
+           <span class="p">],</span>
+<span class="s2">&quot;line_codes&quot;</span><span class="p">:</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;UG2&quot;</span><span class="p">:</span>
+            <span class="p">{</span><span class="s2">&quot;R&quot;</span><span class="p">:[</span> <span class="p">[</span><span class="mf">0.314</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">],</span> 
+                    <span class="p">[</span><span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.314</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">],</span> 
+                    <span class="p">[</span><span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.314</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">],</span> 
+                    <span class="p">[</span><span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.049</span><span class="p">,</span> <span class="mf">0.314</span><span class="p">]],</span> 
+            <span class="s2">&quot;X&quot;</span><span class="p">:[[</span><span class="mf">0.762</span><span class="p">,</span> <span class="mf">0.687</span><span class="p">,</span> <span class="mf">0.665</span><span class="p">,</span> <span class="mf">0.687</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mf">0.687</span><span class="p">,</span> <span class="mf">0.762</span><span class="p">,</span> <span class="mf">0.687</span><span class="p">,</span> <span class="mf">0.665</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mf">0.665</span><span class="p">,</span> <span class="mf">0.687</span><span class="p">,</span> <span class="mf">0.762</span><span class="p">,</span> <span class="mf">0.687</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mf">0.687</span><span class="p">,</span> <span class="mf">0.665</span><span class="p">,</span> <span class="mf">0.687</span><span class="p">,</span> <span class="mf">0.762</span><span class="p">]],</span> <span class="s2">&quot;I_max&quot;</span><span class="p">:</span><span class="mf">200.0</span>
+                    <span class="p">},</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">grid</span> <span class="o">=</span> <span class="n">urisi</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">uz_jacs</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s1">&#39;cigre_eu_lv_ind&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-use">
+<h2>Model use<a class="headerlink" href="#model-use" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -451,7 +510,7 @@ document.write(`
 </div>
 </div>
 <section id="initialization-and-power-flow">
-<h2>Initialization and power flow<a class="headerlink" href="#initialization-and-power-flow" title="Link to this heading">#</a></h2>
+<h3>Initialization and power flow<a class="headerlink" href="#initialization-and-power-flow" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">cigre_eu_lv_ind</span><span class="o">.</span><span class="n">model</span><span class="p">()</span>
@@ -473,8 +532,8 @@ V_I01_1_r = -197.01
 V_I01_1_i = -105.90
 V_I01_2_r =  6.77
 V_I01_2_i = 223.59
-V_I01_3_r = -0.00
-V_I01_3_i =  0.00
+V_I01_3_r =  0.00
+V_I01_3_i = -0.00
 V_I02_0_r = 187.09
 V_I02_0_i = -114.43
 V_I02_1_r = -192.93
@@ -504,10 +563,10 @@ p_agc =  0.00
 </div>
 </div>
 <section id="results">
-<h3>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h3>
+<h4>Results<a class="headerlink" href="#results" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">report_v</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="s1">&#39;cigre_eu_lv_ind.hjson&#39;</span><span class="p">);</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">report_v</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">data</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -519,7 +578,7 @@ V_MV0_cn: 11546.8|  120.0º V,    V_MV0_cg: 11546.8|  120.0º V,    v_0 =     0.
 V_I01_an:   223.7|  -31.7º V,    V_I01_ag:   223.7|  -31.7º V,    V_1 =   223.7 V, unb = 0.01%
 V_I01_bn:   223.7| -151.7º V,    V_I01_bg:   223.7| -151.7º V,    V_2 =     0.0 V
 V_I01_cn:   223.7|   88.3º V,    V_I01_cg:   223.7|   88.3º V,    v_0 =     0.0 V
-  V_I01_ng:      0.0|    113.4º V
+  V_I01_ng:      0.0|    -43.3º V
 V_I02_an:   219.1|  -31.4º V,    V_I02_ag:   219.3|  -31.5º V,    V_1 =   219.6 V, unb = 0.48%
 V_I02_bn:   219.5| -151.5º V,    V_I02_bg:   219.6| -151.4º V,    V_2 =     0.2 V
 V_I02_cn:   220.2|   88.5º V,    V_I02_cg:   219.8|   88.5º V,    v_0 =     0.1 V
@@ -535,7 +594,7 @@ V_I02_cn:   220.2|   88.5º V,    V_I02_cg:   219.8|   88.5º V,    v_0 =     0.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>219.4750263551902
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>219.47502635519004
 </pre></div>
 </div>
 </div>
@@ -543,7 +602,7 @@ V_I02_cn:   220.2|   88.5º V,    V_I02_cg:   219.8|   88.5º V,    v_0 =     0.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">svg</span><span class="p">(</span><span class="s1">&#39;cigre_eu_lv_ind_tooltips.svg&#39;</span><span class="p">)</span>
-<span class="n">s</span><span class="o">.</span><span class="n">set_grid</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s1">&#39;acdc_7bus.hjson&#39;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_grid</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
 <span class="n">s</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;MV0_P&#39;</span><span class="p">,</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s1">&#39;p_MV0&#39;</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="s2"> kW&quot;</span><span class="p">)</span>
 <span class="n">s</span><span class="o">.</span><span class="n">set_tooltips</span><span class="p">(</span><span class="s1">&#39;cigre_eu_lv_ind_results.svg&#39;</span><span class="p">)</span>    
 <span class="n">SVG</span><span class="p">(</span><span class="s1">&#39;cigre_eu_lv_ind_results.svg&#39;</span><span class="p">)</span>
@@ -551,12 +610,12 @@ V_I02_cn:   220.2|   88.5º V,    V_I02_cg:   219.8|   88.5º V,    v_0 =     0.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/c84a7f54685fdd581abc85ab5bd867f2b50cfb4dda84be9476e186bb97980a91.svg" src="../../_images/c84a7f54685fdd581abc85ab5bd867f2b50cfb4dda84be9476e186bb97980a91.svg" /></div>
+<img alt="../../_images/e0a4b2c7f6621cf6684ffb9812a4177449e073a6700ca796de97726b3a19962b.svg" src="../../_images/e0a4b2c7f6621cf6684ffb9812a4177449e073a6700ca796de97726b3a19962b.svg" /></div>
 </div>
 </section>
 </section>
 <section id="load-change">
-<h2>Load change<a class="headerlink" href="#load-change" title="Link to this heading">#</a></h2>
+<h3>Load change<a class="headerlink" href="#load-change" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">report_u</span><span class="p">()</span>
@@ -603,7 +662,7 @@ u_freq = 0.00
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">svg</span><span class="p">(</span><span class="s1">&#39;cigre_eu_lv_ind_tooltips.svg&#39;</span><span class="p">)</span>
-<span class="n">s</span><span class="o">.</span><span class="n">set_grid</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="s1">&#39;acdc_7bus.hjson&#39;</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_grid</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
 <span class="n">s</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s1">&#39;MV0_P&#39;</span><span class="p">,</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">get_value</span><span class="p">(</span><span class="s1">&#39;p_MV0&#39;</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span><span class="si">:</span><span class="s2">5.2f</span><span class="si">}</span><span class="s2"> kW&quot;</span><span class="p">)</span>
 <span class="n">s</span><span class="o">.</span><span class="n">set_tooltips</span><span class="p">(</span><span class="s1">&#39;cigre_eu_lv_ind_results_unb.svg&#39;</span><span class="p">)</span>    
 <span class="n">SVG</span><span class="p">(</span><span class="s1">&#39;cigre_eu_lv_ind_results_unb.svg&#39;</span><span class="p">)</span>
@@ -611,8 +670,9 @@ u_freq = 0.00
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0fa0809e915cc4d36f50d4755a496743c188b8b4221f021e79259909f21cff31.svg" src="../../_images/0fa0809e915cc4d36f50d4755a496743c188b8b4221f021e79259909f21cff31.svg" /></div>
+<img alt="../../_images/90da816909499381e0cbcf89f5a95d10f72dbe1d07f4b2a791ed8cdac793db1b.svg" src="../../_images/90da816909499381e0cbcf89f5a95d10f72dbe1d07f4b2a791ed8cdac793db1b.svg" /></div>
 </div>
+</section>
 </section>
 </section>
 
@@ -680,11 +740,15 @@ u_freq = 0.00
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization-and-power-flow">Initialization and power flow</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-building">Model building</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-use">Model use</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization-and-power-flow">Initialization and power flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-change">Load change</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-change">Load change</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

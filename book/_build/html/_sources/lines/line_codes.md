@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Line codes
-----------
+# Line codes
+
 
 Two types of lines models can be considered:
 
@@ -19,11 +19,13 @@ Line parammeters can be introduced as:
 * Unitary voltage drop for p.f.= 1.0 and p.f.= 0.8
 
 
-Serie impedance sequence parameters
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+## Serie impedance sequence parameters
 
-Sequence coordinates
-''''''''''''''''''''
+
+
+### Sequence coordinates
+
+
 
 .. code:: python
 
@@ -44,8 +46,8 @@ where:
 * ``"X0"``: Zero sequence reactance (Ω/km)
 
 
-Primitive matrices
-''''''''''''''''''
+### Primitive matrices
+
 
 .. code:: python
 
@@ -79,8 +81,8 @@ where:
 * ``"X"``: Reactance primitive (Ω/km)
 
 
-Unitary voltage drop
-''''''''''''''''''''
+### Unitary voltage drop
+
 
 .. code:: python
 
@@ -99,8 +101,8 @@ where:
 
 
 
-PI section sequence parameters
-''''''''''''''''''''''''''''''
+### PI section sequence parameters
+
 
 .. code:: python
 
@@ -125,12 +127,12 @@ where:
 
 
 
-Serie impedance primitives
-''''''''''''''''''''''''''
+### Serie impedance primitives
 
 
-PI section sequence parameters
-''''''''''''''''''''''''''''''
+### PI section sequence parameters
+
+
 
 .. code:: python
 
