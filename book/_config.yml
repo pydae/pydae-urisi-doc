@@ -5,7 +5,7 @@
 
 title: pydae-urisi
 author: Juan Manuel Mauricio
-logo: logo_urisi.svg
+logo: logo_urisi.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
