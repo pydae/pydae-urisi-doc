@@ -2,8 +2,8 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="60.99921"
-   height="96"
+   width="115.54745"
+   height="181.84752"
    id="svg15106"
    version="1.1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
@@ -98,9 +98,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="32.829957"
-     inkscape:cy="36.239222"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-20.708127"
+     inkscape:cy="81.569817"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -123,8 +123,8 @@
        visible="true"
        enabled="true"
        snapvisiblegridlinesonly="true"
-       originx="-9.500006"
-       originy="30.499987"
+       originx="-9.5000095"
+       originy="30.499994"
        spacingy="1"
        spacingx="1"
        units="px" />
@@ -144,24 +144,24 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-229.0985,-392.4375)">
+     transform="translate(-229.0985,-392.43749)">
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 258.59849,474.56312 v -5"
+       style="fill:none;stroke:#000000;stroke-width:1.89425px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 284.97871,548.00354 v -9.47122"
        id="path1" />
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1.89424;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
        id="rect95475"
-       width="59.99921"
-       height="95"
-       x="229.5985"
-       y="392.9375"
+       width="113.65321"
+       height="179.95328"
+       x="230.04562"
+       y="393.38461"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <g
        id="g5"
-       transform="matrix(0,-1.2905294,1.2905294,0,-277.1506,695.79227)"
+       transform="matrix(0,-2.4445788,2.4445788,0,-729.86132,967.06575)"
        style="stroke-width:0.774876">
       <rect
          style="fill:#f0ad4e;stroke:none;stroke-width:0.774874;-inkscape-stroke:none"
@@ -199,7 +199,7 @@
     </g>
     <g
        id="g40949"
-       transform="rotate(90,42.018255,384.94241)"
+       transform="matrix(0,1.894245,-1.894245,0,603.89792,298.64709)"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
@@ -215,8 +215,8 @@
          inkscape:connector-curvature="0" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 269.59849,431.92415 h -20"
+       style="fill:none;stroke:#000000;stroke-width:3.78849;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 305.81541,467.23489 h -37.8849"
        id="path4612-3"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
@@ -224,7 +224,7 @@
        inkscape:export-ydpi="300" />
     <g
        id="g15210"
-       transform="rotate(90,270.28714,459.72563)"
+       transform="matrix(0,1.894245,-1.894245,0,1177.9528,7.907643)"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300">
@@ -235,16 +235,16 @@
          inkscape:connector-curvature="0" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 256.56685,401.26238 v 11.67511"
+       style="fill:none;stroke:#000000;stroke-width:1.89425px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 281.13029,409.15398 V 431.2695"
        id="path15214-7-1-2"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 262.59849,401.26238 v 11.67511"
+       style="fill:none;stroke:#000000;stroke-width:1.89425px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 292.55569,409.15398 V 431.2695"
        id="path15214-7-1-2-6"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
@@ -252,7 +252,7 @@
        inkscape:export-ydpi="300" />
     <g
        id="g4"
-       transform="matrix(1,0,0,0.9197541,0,27.673498)"
+       transform="matrix(1.894245,0,0,1.7422396,-204.87018,-298.51488)"
        style="stroke-width:1.04272">
       <path
          style="fill:none;stroke:#000000;stroke-width:1.04272px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -290,8 +290,8 @@
          sodipodi:nodetypes="cccccccc" />
     </g>
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 254.59849,475.56312 v -4 h 2 v -1.99999"
+       style="fill:none;stroke:#000000;stroke-width:1.89425px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 277.40173,549.89779 v -7.57698 h 3.78849 v -3.78847"
        id="path15367"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
@@ -299,8 +299,8 @@
        inkscape:export-ydpi="300"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 262.59849,475.56311 v -4 h -2 v -1.99999"
+       style="fill:none;stroke:#000000;stroke-width:1.89425px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 292.55569,549.89777 v -7.57698 h -3.78849 v -3.78847"
        id="path15367-5"
        inkscape:connector-curvature="0"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
@@ -308,43 +308,43 @@
        inkscape:export-ydpi="300"
        sodipodi:nodetypes="cccc" />
     <rect
-       style="fill:#5cb85c;stroke:none;stroke-width:2;-inkscape-stroke:none"
+       style="fill:#5cb85c;stroke:none;stroke-width:3.78849;-inkscape-stroke:none"
        id="rect1"
-       width="3.1567266"
-       height="10"
-       x="253.02013"
-       y="474.08853"
+       width="5.9796133"
+       height="18.94245"
+       x="274.41193"
+       y="547.10455"
        rx="0"
        ry="0" />
     <rect
-       style="fill:#5cb85c;stroke:none;stroke-width:2;-inkscape-stroke:none"
+       style="fill:#5cb85c;stroke:none;stroke-width:3.78849;-inkscape-stroke:none"
        id="rect1-9"
-       width="3.1567266"
-       height="10"
-       x="257.02014"
-       y="474.08853"
+       width="5.9796133"
+       height="18.94245"
+       x="281.98892"
+       y="547.10455"
        rx="0"
        ry="0" />
     <rect
-       style="fill:#5cb85c;stroke:none;stroke-width:2;-inkscape-stroke:none"
+       style="fill:#5cb85c;stroke:none;stroke-width:3.78849;-inkscape-stroke:none"
        id="rect1-8"
-       width="3.1567266"
-       height="10"
-       x="261.02011"
-       y="474.08853"
+       width="5.9796133"
+       height="18.94245"
+       x="289.56586"
+       y="547.10455"
        rx="0"
        ry="0" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 258.59851,484.08852 -10e-6,2.35414"
+       style="fill:none;stroke:#000000;stroke-width:1.89425px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 284.97875,566.04698 -2e-5,4.45932"
        id="path3" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 262.59848,484.08852 1e-5,2.4746"
+       style="fill:none;stroke:#000000;stroke-width:1.89425px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 292.55567,566.04698 2e-5,4.6875"
        id="path4" />
     <g
        id="g15159"
-       transform="matrix(0,0.65517237,-0.65517237,0,544.86963,221.19607)"
+       transform="matrix(0,1.241057,-1.241057,0,827.24638,68.06428)"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
        inkscape:export-xdpi="300"
        inkscape:export-ydpi="300"
@@ -362,7 +362,7 @@
     </g>
     <g
        id="g4601"
-       transform="rotate(90,29.51811,397.44227)"
+       transform="matrix(0,1.894245,-1.894245,0,603.89738,346.00323)"
        style="fill:#d9534f"
        inkscape:export-filename="/home/jmmauricio/Documents/public/workspace/pydgrid/docs/source/png/logo.png"
        inkscape:export-xdpi="300"
