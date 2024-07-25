@@ -198,50 +198,50 @@
   <text fill="#000000" id="R00_tt" x="88.692497" y="20.959963" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.0159px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:1.43231">MV0</text>
   <text fill="#000000" id="I01_tt" x="203.44791" y="160.05902" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.0159px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:1.43231">I01</text>
   <g id="g2" transform="matrix(1.4323138,0,0,-1.4323138,-44.13206,245.83997)">
-    <line id="l_I01_0_I02_0" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="112.11407" y2="112.11407" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#8c0000"><title>Currents:
-Ia =  148.7 A
-Ib =  148.5 A
-Ic =  148.0 A
-In =    0.4 A
+    <line id="l_I01_0_I02_0" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="112.11407" y2="112.11407" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#ff0000"><title>Currents:
+Ia =  236.4 A
+Ib =    0.0 A
+Ic =    0.0 A
+In =  236.4 A
 </title></line>
-    <line id="l_I01_1_I02_1" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="107.24182" y2="107.24182" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#8c0000"><title>Currents:
-Ia =  148.7 A
-Ib =  148.5 A
-Ic =  148.0 A
-In =    0.4 A
+    <line id="l_I01_1_I02_1" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="107.24182" y2="107.24182" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#020000"><title>Currents:
+Ia =  236.4 A
+Ib =    0.0 A
+Ic =    0.0 A
+In =  236.4 A
 </title></line>
-    <line id="l_I01_2_I02_2" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="102.36958" y2="102.36958" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#8b0000"><title>Currents:
-Ia =  148.7 A
-Ib =  148.5 A
-Ic =  148.0 A
-In =    0.4 A
+    <line id="l_I01_2_I02_2" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="102.36958" y2="102.36958" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#070000"><title>Currents:
+Ia =  236.4 A
+Ib =    0.0 A
+Ic =    0.0 A
+In =  236.4 A
 </title></line>
-    <line id="l_I01_3_I02_3" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="95.49733" y2="95.49733" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#000000"><title>Currents:
-Ia =  148.7 A
-Ib =  148.5 A
-Ic =  148.0 A
-In =    0.4 A
+    <line id="l_I01_3_I02_3" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="95.49733" y2="95.49733" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#ff0000"><title>Currents:
+Ia =  236.4 A
+Ib =    0.0 A
+Ic =    0.0 A
+In =  236.4 A
 </title></line>
     <rect height="24.361235" id="I01" width="24.361235" x="-116.17428" y="175.85556" data1="               226.8 V /      0.98 pu " data2="               227.6 V /      0.99 pu " data3="               226.9 V /      0.98 pu " data4="                 0.1 V" data0="bus" data5="                 0.0 kW" data6="                 0.0 kvar" data7="xx" class="tooltip-trigger" style="fill:#00000a" transform="rotate(-90)"><title>Voltages and powers:
 Van =   228.6 V (0.99 pu), Sa =   0.0 +   0.0j kVA 
-Vbn =   228.6 V (0.99 pu), Sb =   0.0 +   0.0j kVA 
-Vcn =   228.6 V (0.99 pu), Sc =   0.0 +   0.0j kVA 
+Vbn =   230.9 V (1.00 pu), Sb =   0.0 +   0.0j kVA 
+Vcn =   230.9 V (1.00 pu), Sc =   0.0 +   0.0j kVA 
 Vng =     0.0 V (0.00 pu), St =   0.0 +   0.0j kVA 
-voltage unbalance =  0.00 %
+voltage unbalance =  1.00 %
 </title></rect>
   </g>
   <text fill="#000000" id="I02_tt" x="542.07843" y="158.25443" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.0159px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:1.43231">I02</text>
-  <rect height="34.892933" id="I02" width="34.892933" x="-114.33488" y="545.04669" data1="               231.4 V /      1.00 pu " data2="               227.4 V /      0.98 pu " data3="               229.9 V /      1.00 pu " data4="                 1.8 V" data0="bus" data5="                12.8 kW" data6="                 7.9 kvar" data7="xx" class="tooltip-trigger" style="fill:#000057" transform="rotate(-90)"><title>Voltages and powers:
-Van =   224.2 V (0.97 pu), Sa =  28.3 +  17.6j kVA 
-Vbn =   224.5 V (0.97 pu), Sb =  28.3 +  17.6j kVA 
-Vcn =   225.2 V (0.98 pu), Sc =  28.3 +  17.6j kVA 
-Vng =     0.3 V (0.00 pu), St =  85.0 +  52.7j kVA 
-voltage unbalance =  0.45 %
+  <rect height="34.892933" id="I02" width="34.892933" x="-114.33488" y="545.04669" data1="               231.4 V /      1.00 pu " data2="               227.4 V /      0.98 pu " data3="               229.9 V /      1.00 pu " data4="                 1.8 V" data0="bus" data5="                12.8 kW" data6="                 7.9 kvar" data7="xx" class="tooltip-trigger" style="fill:#0000ff" transform="rotate(-90)"><title>Voltages and powers:
+Van =   215.7 V (0.93 pu), Sa =  50.0 +  10.0j kVA 
+Vbn =   235.0 V (1.02 pu), Sb =   0.0 +   0.0j kVA 
+Vcn =   234.3 V (1.01 pu), Sc =   0.0 +   0.0j kVA 
+Vng =     6.5 V (0.03 pu), St =  50.0 +  10.0j kVA 
+voltage unbalance =  8.49 %
 </title></rect>
   <rect height="11.630979" id="MV0" width="116.30978" x="-155.0433" y="114.70049" style="fill:#000000" data1="             11364.4 V /      0.98 pu " data2="             11376.6 V /      0.99 pu " data3="             11285.8 V /      0.98 pu " data4="                 0.0 V" data0="bus" data5="                 0.0 kW" data6="                 0.0 kvar" data7="xx" class="tooltip-trigger" transform="rotate(-90)"><title>Voltages:
-Uab = 19999.7 V, 1.00 pu
+Uab = 19999.8 V, 1.00 pu
 Ubc = 19999.7 V, 1.00 pu
-Uca = 19999.7 V, 1.00 pu
+Uca = 20000.2 V, 1.00 pu
 </title></rect>
   <g id="trafo_MV0_I01_g" transform="matrix(0,-2.3261956,2.3261956,0,79.807545,-125.26326)" style="stroke-width:0.615732">
     <line stroke="#191928" x1="-100" x2="-100" y1="45" y2="56.235733" id="line178-28" style="stroke:#000000;stroke-width:1.23146" />
@@ -256,20 +256,20 @@ Uca = 19999.7 V, 1.00 pu
       <line stroke="#191928" x1="168.36" x2="168.36" y1="36.532356" y2="44.55022" id="line178-9-9-8-6" style="stroke:#000000;stroke-width:1.23146" />
     </g>
   <title>Currents:
-Ia =    3.0 A	Ia =  148.7 A 
-Ib =    3.0 A	Ib =  148.5 A 
-Ic =    3.0 A	Ic =  148.0 A 
-			  In =    0.4 A 
+Ia =    2.7 A	Ia =  236.4 A 
+Ib =    2.7 A	Ib =    0.0 A 
+Ic =    0.0 A	Ic =    0.0 A 
+			  In =  236.4 A 
 </title></g>
   <path style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.86461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" d="M 117.02668,103.86696 H 65.850373" id="path1117" />
   <path style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.86461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" d="M 117.02668,89.909793 H 65.850373" id="path1117-4" />
   <path style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.86461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" d="M 117.02668,96.888373 H 65.850373" id="path1117-4-6" />
   <rect style="fill:#eeeeee;stroke:#999999;stroke-width:1.43231;-inkscape-stroke:none" id="src_MV0" width="65.134216" height="62.626602" x="0.71615499" y="65.575104" inkscape:label="#src_MV0"><title>Currents:
-Ia =    3.0 A 
-Ib =    3.0 A 
-Ic =    3.0 A 
+Ia =    2.7 A 
+Ib =    2.7 A 
+Ic =    2.7 A 
 Powers:
-p =   87.1 kW
-q =   54.6 kvar 
+p =   53.3 kW
+q =   12.0 kvar 
 </title></rect>
 </svg>
