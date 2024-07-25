@@ -4,7 +4,7 @@
 Loads.
 
 ```{figure} loads_v2.svg
-:height: 250px
+:height: 200px
 :name: fig_loads
 ```
 

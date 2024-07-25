@@ -4,8 +4,6 @@
 ```{figure} ac_3ph_4w_l.svg
 :height: 300px
 :name: esss
-
-
 ```
 
 \begin{equation}

@@ -84,12 +84,7 @@ Transformers are modeled as in [T1]_.
       ],
 ```
 
-
-...[T1] Dugan, R. C., & Santoso, S. (2003). An example of 3-phase transformer modeling for distribution system analysis. 2003 IEEE PES Transmission and Distribution Conference and Exposition (IEEE Cat. No.03CH37495), 3, 1028–1032. https://doi.org/10.1109/TDC.2003.1335084
-
-
-
-Here is an example citation to a paper by Doe {cite}`holdgraf_evidence_2014`.
+{cite}`Dugan:03`.
 
 
 ## References

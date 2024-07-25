@@ -35,7 +35,7 @@
      showgrid="true"
      inkscape:zoom="0.80247962"
      inkscape:cx="228.66624"
-     inkscape:cy="-33.022646"
+     inkscape:cy="-33.022645"
      inkscape:window-width="1280"
      inkscape:window-height="730"
      inkscape:window-x="-6"
@@ -446,7 +446,7 @@
        cy="39.795738"
        r="6.8800001"
        data0="trafo"
-       data1="a:  0.81	     b:  1.01	     c:  1.18	      A"
+       data1="a:  0.81      b:  1.01      c:  1.18       A"
        data2="a: 58.62     b: 34.69     c: 57.28     n: 28.30      A"
        data3=""
        data4=""
@@ -458,7 +458,7 @@
        cy="31.977432"
        r="6.8800001"
        data0="trafo"
-       data1="a:  0.81	     b:  1.01	     c:  1.18	      A"
+       data1="a:  0.81      b:  1.01      c:  1.18       A"
        data2="a: 58.62     b: 34.69     c: 57.28     n: 28.30      A"
        data3=""
        data4="" />
@@ -506,9 +506,10 @@
      id="path1117-4-6" />
   <rect
      style="fill:#eeeeee;stroke:#999999;stroke-width:1.43231;-inkscape-stroke:none"
-     id="rect1"
+     id="src_MV0"
      width="65.134216"
      height="62.626602"
      x="0.71615499"
-     y="65.575104" />
+     y="65.575104"
+     inkscape:label="#src_MV0" />
 </svg>
