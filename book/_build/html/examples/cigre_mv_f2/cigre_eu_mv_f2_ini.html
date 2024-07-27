@@ -1,0 +1,821 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; pydae-urisi</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'examples/cigre_mv_f2/cigre_eu_mv_f2_ini';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo_urisi.png" class="logo__image only-light" alt="pydae-urisi - Home"/>
+    <script>document.write(`<img src="../../_static/logo_urisi.png" class="logo__image only-dark" alt="pydae-urisi - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to pydae-urisi
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../models.html">Models</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../buses/buses.html">Buses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lines/lines.html">Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../line_codes/line_codes.html">Line codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../trafos/transformers.html">Transformers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../loads/loads.html">Loads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shunts.html">Shunt elements</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vscs.html">VSCs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vscs/dcdc_gfh.html">DC-DC converter GFH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vscs/dcdc_gfl.html">DC-DC converter GFL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vscs/ac_3p_4w.html">VSC with coupling inductor</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../vsgs.html">VSGs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../vsgs/gfpizv.html">PI based VSG</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../esss/esss.html">ESSs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../esss/bess_dcdc.html">BESS with DC/DC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../esss/bess_dcac.html">BESS with DC/AC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../esss/bess.html">BESS</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../examples.html">Examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cigre_eu_lv_ind/cigre_eu_lv_ind.html">CIGRE European Low Voltage Industrial Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cigre_eu_lv_res/cigre_eu_lv_res.html">CIGRE European Low Voltage Residential Network</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/pydae/pydae-urisi-doc" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/pydae/pydae-urisi-doc/issues/new?title=Issue%20on%20page%20%2Fexamples/cigre_mv_f2/cigre_eu_mv_f2_ini.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/examples/cigre_mv_f2/cigre_eu_mv_f2_ini.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cigre_eu_mv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">cigre_eu_mv</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;cigre_eu_mv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">cigre_eu_mv</span><span class="o">.</span><span class="n">model</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">ini</span><span class="p">({</span><span class="s1">&#39;p_load_11&#39;</span><span class="p">:</span><span class="mf">100.0e3</span><span class="p">,</span> <span class="s1">&#39;q_load_11&#39;</span><span class="p">:</span><span class="mf">200.0e3</span><span class="p">},</span><span class="s1">&#39;xy_0.json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">report_u</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p_load_11 =95000000.00
+q_load_11 =31224989.99
+e_ao_m_01 =11547.01
+e_bo_m_01 =11547.01
+e_co_m_01 =11547.01
+phi_01 = 0.00
+u_freq = 0.00
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>  <span class="o">=</span> <span class="p">{</span>
+<span class="s2">&quot;system&quot;</span><span class="p">:{</span><span class="s2">&quot;S_base&quot;</span><span class="p">:</span><span class="mf">1e6</span><span class="p">,</span> <span class="s2">&quot;K_p_agc&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;K_i_agc&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;K_xif&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">},</span>
+<span class="s2">&quot;buses&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;02&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;03&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+          <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;04&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;05&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+          <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;06&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;07&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;08&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+          <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;09&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;10&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;11&quot;</span><span class="p">,</span><span class="s2">&quot;U_kV&quot;</span><span class="p">:</span><span class="mf">20.0</span><span class="p">,</span> <span class="s2">&quot;N_nodes&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}],</span>
+<span class="s2">&quot;lines&quot;</span><span class="p">:</span>     <span class="p">[</span>  
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;01&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;02&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">2.82</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;02&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;03&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">4.42</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;03&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;04&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">0.61</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;03&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;08&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">1.30</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;04&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;05&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">0.56</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;05&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;06&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">1.54</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;06&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;07&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">0.24</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;07&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;08&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">1.67</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;08&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;09&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">0.32</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;09&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">0.77</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+                <span class="p">{</span><span class="s2">&quot;bus_j&quot;</span><span class="p">:</span><span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;bus_k&quot;</span><span class="p">:</span><span class="s2">&quot;11&quot;</span><span class="p">,</span> <span class="s2">&quot;R_km&quot;</span><span class="p">:</span><span class="mf">0.501</span><span class="p">,</span> <span class="s2">&quot;X_km&quot;</span><span class="p">:</span><span class="mf">0.716</span><span class="p">,</span> <span class="s2">&quot;B_muS_km&quot;</span><span class="p">:</span><span class="mf">47.493</span><span class="p">,</span> <span class="s2">&quot;km&quot;</span><span class="p">:</span><span class="mf">0.33</span><span class="p">,</span> <span class="s2">&quot;N_branches&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">},</span>
+             <span class="p">],</span>
+<span class="s2">&quot;loads&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="c1">#{&quot;bus&quot;: &quot;12&quot;, &quot;kVA&quot;:0e3, &quot;pf&quot;: 0.95, &quot;T_i&quot;:0.01,&quot;I_max&quot;:1200},</span>
+        <span class="c1">#{&quot;bus&quot;: &quot;13&quot;, &quot;kVA&quot;:0e3, &quot;pf&quot;: 0.95, &quot;T_i&quot;:0.01,&quot;I_max&quot;:1200},</span>
+        <span class="c1">#{&quot;bus&quot;: &quot;14&quot;, &quot;kVA&quot;:0e3, &quot;pf&quot;: 0.95, &quot;T_i&quot;:0.01,&quot;I_max&quot;:1200}</span>
+        <span class="p">],</span>
+<span class="s2">&quot;sources&quot;</span><span class="p">:[</span>
+       <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;ac3ph3w_ideal&quot;</span><span class="p">,</span> <span class="s2">&quot;bus&quot;</span><span class="p">:</span> <span class="s2">&quot;01&quot;</span><span class="p">,</span> <span class="s2">&quot;S_n&quot;</span><span class="p">:</span><span class="mf">100e3</span><span class="p">,</span> <span class="s2">&quot;U_n&quot;</span> <span class="p">:</span><span class="mf">20e3</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span><span class="mf">0.01</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">}</span>
+           <span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pydae.urisi.utils</span> <span class="kn">import</span> <span class="n">report_v</span>
+<span class="kn">from</span> <span class="nn">pydae.urisi.utils</span> <span class="kn">import</span> <span class="n">get_v</span><span class="p">,</span> <span class="n">get_i</span>
+<span class="kn">from</span> <span class="nn">pydae.urisi.utils.model2svg</span> <span class="kn">import</span> <span class="n">model2svg</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">report_v</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V_01_an: 11546.4|   -0.0º V,    V_01_ag: 11546.4|   -0.0º V,    V_1 = 11546.4 V, unb = 0.00%
+V_01_bn: 11546.4| -120.0º V,    V_01_bg: 11546.4| -120.0º V,    V_2 =     0.0 V
+V_01_cn: 11546.4|  120.0º V,    V_01_cg: 11546.4|  120.0º V,    v_0 =     0.0 V
+  V_01_ng:      0.0|      0.0º V
+V_02_an: 11530.6|    0.0º V,    V_02_ag: 11530.6|    0.0º V,    V_1 = 11530.6 V, unb = 0.00%
+V_02_bn: 11530.6| -120.0º V,    V_02_bg: 11530.6| -120.0º V,    V_2 =     0.0 V
+V_02_cn: 11530.6|  120.0º V,    V_02_cg: 11530.6|  120.0º V,    v_0 =     0.0 V
+  V_02_ng:      0.0|      0.0º V
+V_03_an: 11505.8|    0.0º V,    V_03_ag: 11505.8|    0.0º V,    V_1 = 11505.8 V, unb = 0.00%
+V_03_bn: 11505.8| -120.0º V,    V_03_bg: 11505.8| -120.0º V,    V_2 =     0.0 V
+V_03_cn: 11505.8|  120.0º V,    V_03_cg: 11505.8|  120.0º V,    v_0 =     0.0 V
+  V_03_ng:      0.0|      0.0º V
+V_04_an: 11505.1|    0.0º V,    V_04_ag: 11505.1|    0.0º V,    V_1 = 11505.1 V, unb = 0.00%
+V_04_bn: 11505.1| -120.0º V,    V_04_bg: 11505.1| -120.0º V,    V_2 =     0.0 V
+V_04_cn: 11505.1|  120.0º V,    V_04_cg: 11505.1|  120.0º V,    v_0 =     0.0 V
+  V_04_ng:      0.0|      0.0º V
+V_05_an: 11504.4|    0.0º V,    V_05_ag: 11504.4|    0.0º V,    V_1 = 11504.4 V, unb = 0.00%
+V_05_bn: 11504.4| -120.0º V,    V_05_bg: 11504.4| -120.0º V,    V_2 =     0.0 V
+V_05_cn: 11504.4|  120.0º V,    V_05_cg: 11504.4|  120.0º V,    v_0 =     0.0 V
+  V_05_ng:      0.0|      0.0º V
+V_06_an: 11502.5|    0.0º V,    V_06_ag: 11502.5|    0.0º V,    V_1 = 11502.5 V, unb = 0.00%
+V_06_bn: 11502.5| -120.0º V,    V_06_bg: 11502.5| -120.0º V,    V_2 =     0.0 V
+V_06_cn: 11502.5|  120.0º V,    V_06_cg: 11502.5|  120.0º V,    v_0 =     0.0 V
+  V_06_ng:      0.0|      0.0º V
+V_07_an: 11502.2|    0.0º V,    V_07_ag: 11502.2|    0.0º V,    V_1 = 11502.2 V, unb = 0.00%
+V_07_bn: 11502.2| -120.0º V,    V_07_bg: 11502.2| -120.0º V,    V_2 =     0.0 V
+V_07_cn: 11502.2|  120.0º V,    V_07_cg: 11502.2|  120.0º V,    v_0 =     0.0 V
+  V_07_ng:      0.0|      0.0º V
+V_08_an: 11500.1|    0.0º V,    V_08_ag: 11500.1|    0.0º V,    V_1 = 11500.1 V, unb = 0.00%
+V_08_bn: 11500.1| -120.0º V,    V_08_bg: 11500.1| -120.0º V,    V_2 =     0.0 V
+V_08_cn: 11500.1|  120.0º V,    V_08_cg: 11500.1|  120.0º V,    v_0 =     0.0 V
+  V_08_ng:      0.0|      0.0º V
+V_09_an: 11498.3|    0.0º V,    V_09_ag: 11498.3|    0.0º V,    V_1 = 11498.3 V, unb = 0.00%
+V_09_bn: 11498.3| -120.0º V,    V_09_bg: 11498.3| -120.0º V,    V_2 =     0.0 V
+V_09_cn: 11498.3|  120.0º V,    V_09_cg: 11498.3|  120.0º V,    v_0 =     0.0 V
+  V_09_ng:      0.0|      0.0º V
+V_10_an: 11494.0|    0.0º V,    V_10_ag: 11494.0|    0.0º V,    V_1 = 11494.0 V, unb = 0.00%
+V_10_bn: 11494.0| -120.0º V,    V_10_bg: 11494.0| -120.0º V,    V_2 =     0.0 V
+V_10_cn: 11494.0|  120.0º V,    V_10_cg: 11494.0|  120.0º V,    v_0 =     0.0 V
+  V_10_ng:      0.0|      0.0º V
+V_11_an: 11492.2|    0.0º V,    V_11_ag: 11492.2|    0.0º V,    V_1 = 11492.2 V, unb = 0.00%
+V_11_bn: 11492.2| -120.0º V,    V_11_bg: 11492.2| -120.0º V,    V_2 =     0.0 V
+V_11_cn: 11492.2|  120.0º V,    V_11_cg: 11492.2|  120.0º V,    v_0 =     0.0 V
+  V_11_ng:      0.0|      0.0º V
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;01&#39;: {&#39;v_01_an&#39;: 11546.396431512858,
+  &#39;v_01_bn&#39;: 11546.396431512858,
+  &#39;v_01_cn&#39;: 11546.396431512858,
+  &#39;v_unb&#39;: 1.575374112897598e-16,
+  &#39;v_ng&#39;: 0.0},
+ &#39;02&#39;: {&#39;v_02_an&#39;: 11530.584079489377,
+  &#39;v_02_bn&#39;: 11530.584079489377,
+  &#39;v_02_cn&#39;: 11530.584079489292,
+  &#39;v_unb&#39;: 7.414412086784896e-15,
+  &#39;v_ng&#39;: 0.0},
+ &#39;03&#39;: {&#39;v_03_an&#39;: 11505.801129523566,
+  &#39;v_03_bn&#39;: 11505.801129523566,
+  &#39;v_03_cn&#39;: 11505.801129523352,
+  &#39;v_unb&#39;: 1.865500256802202e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;04&#39;: {&#39;v_04_an&#39;: 11505.050074578618,
+  &#39;v_04_bn&#39;: 11505.050074578618,
+  &#39;v_04_cn&#39;: 11505.0500745784,
+  &#39;v_unb&#39;: 1.8972427500147077e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;05&#39;: {&#39;v_05_an&#39;: 11504.36058245718,
+  &#39;v_05_bn&#39;: 11504.36058245718,
+  &#39;v_05_cn&#39;: 11504.360582456957,
+  &#39;v_unb&#39;: 1.9447903691171962e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;06&#39;: {&#39;v_06_an&#39;: 11502.464483778027,
+  &#39;v_06_bn&#39;: 11502.464483778027,
+  &#39;v_06_cn&#39;: 11502.464483777789,
+  &#39;v_unb&#39;: 2.0716222353963135e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;07&#39;: {&#39;v_07_an&#39;: 11502.168988495012,
+  &#39;v_07_bn&#39;: 11502.168988495012,
+  &#39;v_07_cn&#39;: 11502.168988494775,
+  &#39;v_unb&#39;: 2.0558611397336456e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;08&#39;: {&#39;v_08_an&#39;: 11500.112838411264,
+  &#39;v_08_bn&#39;: 11500.112838411264,
+  &#39;v_08_cn&#39;: 11500.112838411029,
+  &#39;v_unb&#39;: 2.0404115712123253e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;09&#39;: {&#39;v_09_an&#39;: 11498.318662241423,
+  &#39;v_09_bn&#39;: 11498.318662241423,
+  &#39;v_09_cn&#39;: 11498.318662241185,
+  &#39;v_unb&#39;: 2.0723691773042127e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;10&#39;: {&#39;v_10_an&#39;: 11494.0014509267,
+  &#39;v_10_bn&#39;: 11494.0014509267,
+  &#39;v_10_cn&#39;: 11494.001450926453,
+  &#39;v_unb&#39;: 2.1522753406499153e-14,
+  &#39;v_ng&#39;: 0.0},
+ &#39;11&#39;: {&#39;v_11_an&#39;: 11492.151228366838,
+  &#39;v_11_bn&#39;: 11492.151228366838,
+  &#39;v_11_cn&#39;: 11492.15122836659,
+  &#39;v_unb&#39;: 2.1526218543975304e-14,
+  &#39;v_ng&#39;: 0.0}}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">report_y</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V_01_0_r =  0.00
+V_01_0_i =  0.00
+V_01_1_r =  0.00
+V_01_1_i =  0.00
+V_01_2_r =  0.00
+V_01_2_i =  0.00
+V_02_0_r =  0.00
+V_02_0_i =  0.00
+V_02_1_r =  0.00
+V_02_1_i =  0.00
+V_02_2_r =  0.00
+V_02_2_i =  0.00
+V_03_0_r =  0.00
+V_03_0_i =  0.00
+V_03_1_r =  0.00
+V_03_1_i =  0.00
+V_03_2_r =  0.00
+V_03_2_i =  0.00
+V_04_0_r =  0.00
+V_04_0_i =  0.00
+V_04_1_r =  0.00
+V_04_1_i =  0.00
+V_04_2_r =  0.00
+V_04_2_i =  0.00
+V_05_0_r =  0.00
+V_05_0_i =  0.00
+V_05_1_r =  0.00
+V_05_1_i =  0.00
+V_05_2_r =  0.00
+V_05_2_i =  0.00
+V_06_0_r =  0.00
+V_06_0_i =  0.00
+V_06_1_r =  0.00
+V_06_1_i =  0.00
+V_06_2_r =  0.00
+V_06_2_i =  0.00
+V_07_0_r =  0.00
+V_07_0_i =  0.00
+V_07_1_r =  0.00
+V_07_1_i =  0.00
+V_07_2_r =  0.00
+V_07_2_i =  0.00
+V_08_0_r =  0.00
+V_08_0_i =  0.00
+V_08_1_r =  0.00
+V_08_1_i =  0.00
+V_08_2_r =  0.00
+V_08_2_i =  0.00
+V_09_0_r =  0.00
+V_09_0_i =  0.00
+V_09_1_r =  0.00
+V_09_1_i =  0.00
+V_09_2_r =  0.00
+V_09_2_i =  0.00
+V_10_0_r =  0.00
+V_10_0_i =  0.00
+V_10_1_r =  0.00
+V_10_1_i =  0.00
+V_10_2_r =  0.00
+V_10_2_i =  0.00
+V_11_0_r =  0.00
+V_11_0_i =  0.00
+V_11_1_r =  0.00
+V_11_1_i =  0.00
+V_11_2_r =  0.00
+V_11_2_i =  0.00
+i_load_11_a_r =  0.00
+i_load_11_a_i =  0.00
+i_load_11_b_r =  0.00
+i_load_11_b_i =  0.00
+i_load_11_c_r =  0.00
+i_load_11_c_i =  0.00
+i_vsc_01_a_r =  0.00
+i_vsc_01_b_r =  0.00
+i_vsc_01_c_r =  0.00
+i_vsc_01_a_i =  0.00
+i_vsc_01_b_i =  0.00
+i_vsc_01_c_i =  0.00
+omega_coi =  0.00
+p_agc =  0.00
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./examples\cigre_mv_f2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Juan Manuel Mauricio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

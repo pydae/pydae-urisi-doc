@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" height="160.4225" version="1.1" width="582.13556" id="cigre_eu_lv_acdc" sodipodi:docname="cigre_eu_lv_ind.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)">
+  <metadata id="metadata599">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview id="namedview2762" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" showgrid="true" inkscape:zoom="0.80247962" inkscape:cx="228.66624" inkscape:cy="-33.022645" inkscape:window-width="1280" inkscape:window-height="730" inkscape:window-x="-6" inkscape:window-y="-6" inkscape:window-maximized="1" inkscape:current-layer="cigre_eu_lv_acdc" fit-margin-top="20" fit-margin-left="30" fit-margin-right="35" fit-margin-bottom="20" lock-margins="true" inkscape:document-rotation="0" inkscape:showpageshadow="2" inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid type="xygrid" id="grid8993" originx="274.18828" originy="-26.348977" spacingy="1" spacingx="1" units="px" visible="true"/>
+  </sodipodi:namedview>
+  <defs id="defs2746">
+    <marker style="overflow:visible" id="Arrow2Mend" refX="0" refY="0" orient="auto" inkscape:stockid="Arrow2Mend" inkscape:isstock="true">
+      <path transform="scale(-0.6)" d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z" style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round" id="path2166"/>
+    </marker>
+  </defs>
+  <rect style="fill:none;stroke:none;stroke-width:1;-inkscape-stroke:none" id="rect2" width="515" height="230" x="-30.811726" y="-36.348976"/>
+  <g id="g5944-3" transform="matrix(0.57446809,0,0,1,163.36914,-140.34898)" style="stroke-width:1.31937"/>
+  <script type="text/ecmascript" id="script15">
+                (function() {
+                    var svg = document.getElementById('cigre_eu_lv_acdc');
+                    var tooltip_1 = svg.getElementById('tooltip1');
+                var tooltipText_1_1 = tooltip_1.getElementsByTagName('text')[0];
+                var tooltipText_1_2 = tooltip_1.getElementsByTagName('text')[1];
+                var tooltipText_1_3 = tooltip_1.getElementsByTagName('text')[2];
+                var tooltipText_1_4 = tooltip_1.getElementsByTagName('text')[3];
+                var tooltipText_1_5 = tooltip_1.getElementsByTagName('text')[4];
+                var tooltipText_1_6 = tooltip_1.getElementsByTagName('text')[5];
+                    var tooltip_2 = svg.getElementById('tooltip2');
+                var tooltipText_2_1 = tooltip_2.getElementsByTagName('text')[0];
+                var tooltipText_2_2 = tooltip_2.getElementsByTagName('text')[1];
+                var tooltipText_2_3 = tooltip_2.getElementsByTagName('text')[2];
+                var tooltipText_2_4 = tooltip_2.getElementsByTagName('text')[3];
+                var tooltipText_2_5 = tooltip_2.getElementsByTagName('text')[4];
+                var tooltipText_2_6 = tooltip_2.getElementsByTagName('text')[5];
+                    var tooltip_3 = svg.getElementById('tooltip3');
+                var tooltipText_3_1 = tooltip_3.getElementsByTagName('text')[0];
+                var tooltipText_3_2 = tooltip_3.getElementsByTagName('text')[1];
+                var tooltipText_3_3 = tooltip_3.getElementsByTagName('text')[2];
+                var tooltipText_3_4 = tooltip_3.getElementsByTagName('text')[3];
+        
+                var tooltipRects = tooltip_1.getElementsByTagName('rect');
+                var triggers = svg.getElementsByClassName('tooltip-trigger');
+                for (var i = 0; i &lt; triggers.length; i++) {
+                    triggers[i].addEventListener('mousemove', showTooltip);
+                    triggers[i].addEventListener('mouseout', hideTooltip);
+                }
+                function showTooltip(evt) {
+                    var CTM = svg.getScreenCTM();
+                    var x_unsat =  (evt.clientX - CTM.e) / CTM.a
+                    var x = x_unsat;
+                    if  (x_unsat&gt;763.02319) {var x = 763.02319}
+                    if  (x_unsat&lt;160.0) {var x = 160.0}
+        
+                    
+                    var y_unsat = (evt.clientY - CTM.f) / CTM.d + 30;
+                    var y = y_unsat;
+                    if  (y_unsat&gt;403.65271) {var y = 403.65271 - 100}
+                    
+                    
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;bus&quot;) {
+                        tooltip_1.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_1.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}
+                    
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;line&quot;) {
+                        tooltip_2.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_2.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}
+        
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;vsc&quot;) {
+                        tooltip_3.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_3.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}
+                        
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;trafo&quot;) {
+                        tooltip_3.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_3.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}    
+                        
+                    tooltipText_1_1.firstChild.data = evt.target.getAttributeNS(null, &quot;data1&quot;);
+                    tooltipText_1_2.firstChild.data = evt.target.getAttributeNS(null, &quot;data2&quot;);
+                    tooltipText_1_3.firstChild.data = evt.target.getAttributeNS(null, &quot;data3&quot;);
+                    tooltipText_1_4.firstChild.data = evt.target.getAttributeNS(null, &quot;data4&quot;);
+                    tooltipText_1_5.firstChild.data = evt.target.getAttributeNS(null, &quot;data5&quot;);
+                    tooltipText_1_6.firstChild.data = evt.target.getAttributeNS(null, &quot;data6&quot;);
+            
+                    tooltipText_2_1.firstChild.data = evt.target.getAttributeNS(null, &quot;data1&quot;);
+                    tooltipText_2_2.firstChild.data = evt.target.getAttributeNS(null, &quot;data2&quot;);
+                    tooltipText_2_3.firstChild.data = evt.target.getAttributeNS(null, &quot;data3&quot;);
+                    tooltipText_2_4.firstChild.data = evt.target.getAttributeNS(null, &quot;data4&quot;);
+                    tooltipText_2_5.firstChild.data = evt.target.getAttributeNS(null, &quot;data5&quot;);
+                    tooltipText_2_6.firstChild.data = evt.target.getAttributeNS(null, &quot;data6&quot;);
+        
+                    tooltipText_3_1.firstChild.data = evt.target.getAttributeNS(null, &quot;data1&quot;);
+                    tooltipText_3_2.firstChild.data = evt.target.getAttributeNS(null, &quot;data2&quot;);
+                    tooltipText_3_3.firstChild.data = evt.target.getAttributeNS(null, &quot;data3&quot;);
+                    tooltipText_3_4.firstChild.data = evt.target.getAttributeNS(null, &quot;data4&quot;);
+                    
+                        var length = tooltipText_1_1.getComputedTextLength()+200;
+                        for (var i = 0; i &lt; tooltipRects.length; i++) {
+                            tooltipRects[i].setAttributeNS(null, &quot;width&quot;, length + 8);
+                        }
+                    }
+                    function hideTooltip(evt) {
+                        tooltip_1.setAttributeNS(null, &quot;visibility&quot;, &quot;hidden&quot;);
+                        tooltip_2.setAttributeNS(null, &quot;visibility&quot;, &quot;hidden&quot;);
+                        tooltip_3.setAttributeNS(null, &quot;visibility&quot;, &quot;hidden&quot;);
+                    }
+                })()
+            </script>
+  <script type="text/ecmascript" id="script1">
+                (function() {
+                    var svg = document.getElementById('cigre_eu_lv_acdc');
+                    var tooltip_1 = svg.getElementById('tooltip1');
+                var tooltipText_1_1 = tooltip_1.getElementsByTagName('text')[0];
+                var tooltipText_1_2 = tooltip_1.getElementsByTagName('text')[1];
+                var tooltipText_1_3 = tooltip_1.getElementsByTagName('text')[2];
+                var tooltipText_1_4 = tooltip_1.getElementsByTagName('text')[3];
+                var tooltipText_1_5 = tooltip_1.getElementsByTagName('text')[4];
+                var tooltipText_1_6 = tooltip_1.getElementsByTagName('text')[5];
+                    var tooltip_2 = svg.getElementById('tooltip2');
+                var tooltipText_2_1 = tooltip_2.getElementsByTagName('text')[0];
+                var tooltipText_2_2 = tooltip_2.getElementsByTagName('text')[1];
+                var tooltipText_2_3 = tooltip_2.getElementsByTagName('text')[2];
+                var tooltipText_2_4 = tooltip_2.getElementsByTagName('text')[3];
+                var tooltipText_2_5 = tooltip_2.getElementsByTagName('text')[4];
+                var tooltipText_2_6 = tooltip_2.getElementsByTagName('text')[5];
+                    var tooltip_3 = svg.getElementById('tooltip3');
+                var tooltipText_3_1 = tooltip_3.getElementsByTagName('text')[0];
+                var tooltipText_3_2 = tooltip_3.getElementsByTagName('text')[1];
+                var tooltipText_3_3 = tooltip_3.getElementsByTagName('text')[2];
+                var tooltipText_3_4 = tooltip_3.getElementsByTagName('text')[3];
+        
+                var tooltipRects = tooltip_1.getElementsByTagName('rect');
+                var triggers = svg.getElementsByClassName('tooltip-trigger');
+                for (var i = 0; i &lt; triggers.length; i++) {
+                    triggers[i].addEventListener('mousemove', showTooltip);
+                    triggers[i].addEventListener('mouseout', hideTooltip);
+                }
+                function showTooltip(evt) {
+                    var CTM = svg.getScreenCTM();
+                    var x_unsat =  (evt.clientX - CTM.e) / CTM.a
+                    var x = x_unsat;
+                    if  (x_unsat&gt;763.02319) {var x = 763.02319}
+                    if  (x_unsat&lt;160.0) {var x = 160.0}
+        
+                    
+                    var y_unsat = (evt.clientY - CTM.f) / CTM.d + 30;
+                    var y = y_unsat;
+                    if  (y_unsat&gt;403.65271) {var y = 403.65271 - 100}
+                    
+                    
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;bus&quot;) {
+                        tooltip_1.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_1.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}
+                    
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;line&quot;) {
+                        tooltip_2.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_2.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}
+        
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;vsc&quot;) {
+                        tooltip_3.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_3.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}
+                        
+                    if (evt.target.getAttributeNS(null, &quot;data0&quot;) == &quot;trafo&quot;) {
+                        tooltip_3.setAttributeNS(null, &quot;transform&quot;, &quot;translate(&quot; + x + &quot; &quot; + y + &quot;)&quot;);
+                        tooltip_3.setAttributeNS(null, &quot;visibility&quot;, &quot;visible&quot;)}    
+                        
+                    tooltipText_1_1.firstChild.data = evt.target.getAttributeNS(null, &quot;data1&quot;);
+                    tooltipText_1_2.firstChild.data = evt.target.getAttributeNS(null, &quot;data2&quot;);
+                    tooltipText_1_3.firstChild.data = evt.target.getAttributeNS(null, &quot;data3&quot;);
+                    tooltipText_1_4.firstChild.data = evt.target.getAttributeNS(null, &quot;data4&quot;);
+                    tooltipText_1_5.firstChild.data = evt.target.getAttributeNS(null, &quot;data5&quot;);
+                    tooltipText_1_6.firstChild.data = evt.target.getAttributeNS(null, &quot;data6&quot;);
+            
+                    tooltipText_2_1.firstChild.data = evt.target.getAttributeNS(null, &quot;data1&quot;);
+                    tooltipText_2_2.firstChild.data = evt.target.getAttributeNS(null, &quot;data2&quot;);
+                    tooltipText_2_3.firstChild.data = evt.target.getAttributeNS(null, &quot;data3&quot;);
+                    tooltipText_2_4.firstChild.data = evt.target.getAttributeNS(null, &quot;data4&quot;);
+                    tooltipText_2_5.firstChild.data = evt.target.getAttributeNS(null, &quot;data5&quot;);
+                    tooltipText_2_6.firstChild.data = evt.target.getAttributeNS(null, &quot;data6&quot;);
+        
+                    tooltipText_3_1.firstChild.data = evt.target.getAttributeNS(null, &quot;data1&quot;);
+                    tooltipText_3_2.firstChild.data = evt.target.getAttributeNS(null, &quot;data2&quot;);
+                    tooltipText_3_3.firstChild.data = evt.target.getAttributeNS(null, &quot;data3&quot;);
+                    tooltipText_3_4.firstChild.data = evt.target.getAttributeNS(null, &quot;data4&quot;);
+                    
+                        var length = tooltipText_1_1.getComputedTextLength()+200;
+                        for (var i = 0; i &lt; tooltipRects.length; i++) {
+                            tooltipRects[i].setAttributeNS(null, &quot;width&quot;, length + 8);
+                        }
+                    }
+                    function hideTooltip(evt) {
+                        tooltip_1.setAttributeNS(null, &quot;visibility&quot;, &quot;hidden&quot;);
+                        tooltip_2.setAttributeNS(null, &quot;visibility&quot;, &quot;hidden&quot;);
+                        tooltip_3.setAttributeNS(null, &quot;visibility&quot;, &quot;hidden&quot;);
+                    }
+                })()
+            </script>
+  <text fill="#000000" id="R00_tt" x="88.692497" y="20.959963" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.0159px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:1.43231">MV0</text>
+  <text fill="#000000" id="I01_tt" x="203.44791" y="160.05902" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.0159px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:1.43231">I01</text>
+  <g id="g2" transform="matrix(1.4323138,0,0,-1.4323138,-44.13206,245.83997)">
+    <line id="l_I01_0_I02_0" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="112.11407" y2="112.11407" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#8c0000"><title>Currents:
+Ia =  148.7 A
+Ib =  148.5 A
+Ic =  148.0 A
+In =    0.4 A
+</title></line>
+    <line id="l_I01_1_I02_1" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="107.24182" y2="107.24182" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#8c0000"><title>Currents:
+Ia =  148.7 A
+Ib =  148.5 A
+Ic =  148.0 A
+In =    0.4 A
+</title></line>
+    <line id="l_I01_2_I02_2" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="102.36958" y2="102.36958" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#8b0000"><title>Currents:
+Ia =  148.7 A
+Ib =  148.5 A
+Ic =  148.0 A
+In =    0.4 A
+</title></line>
+    <line id="l_I01_3_I02_3" stroke="#191928" stroke-width="1.99999" x1="179.91577" x2="427.58832" y1="95.49733" y2="95.49733" data0="line" data1="                58.6 A /     58.62 pu " data2="                34.7 A /     34.69 pu " data3="                57.3 A /     57.28 pu " data4="                28.3 A /     28.35 pu " class="tooltip-trigger" style="stroke:#000000"><title>Currents:
+Ia =  148.7 A
+Ib =  148.5 A
+Ic =  148.0 A
+In =    0.4 A
+</title></line>
+    <rect height="24.361235" id="I01" width="24.361235" x="-116.17428" y="175.85556" data1="               226.8 V /      0.98 pu " data2="               227.6 V /      0.99 pu " data3="               226.9 V /      0.98 pu " data4="                 0.1 V" data0="bus" data5="                 0.0 kW" data6="                 0.0 kvar" data7="xx" class="tooltip-trigger" style="fill:#00000a" transform="rotate(-90)"><title>Voltages and powers:
+Van =   228.6 V (0.99 pu), Sa =   0.0 +   0.0j kVA 
+Vbn =   228.6 V (0.99 pu), Sb =   0.0 +   0.0j kVA 
+Vcn =   228.6 V (0.99 pu), Sc =   0.0 +   0.0j kVA 
+Vng =     0.0 V (0.00 pu), St =   0.0 +   0.0j kVA 
+voltage unbalance =  0.00 %
+</title></rect>
+  </g>
+  <text fill="#000000" id="I02_tt" x="542.07843" y="158.25443" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:31.0159px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:1.43231">I02</text>
+  <rect height="34.892933" id="I02" width="34.892933" x="-114.33488" y="545.04669" data1="               231.4 V /      1.00 pu " data2="               227.4 V /      0.98 pu " data3="               229.9 V /      1.00 pu " data4="                 1.8 V" data0="bus" data5="                12.8 kW" data6="                 7.9 kvar" data7="xx" class="tooltip-trigger" style="fill:#000057" transform="rotate(-90)"><title>Voltages and powers:
+Van =   224.2 V (0.97 pu), Sa =  28.3 +  17.6j kVA 
+Vbn =   224.5 V (0.97 pu), Sb =  28.3 +  17.6j kVA 
+Vcn =   225.2 V (0.98 pu), Sc =  28.3 +  17.6j kVA 
+Vng =     0.3 V (0.00 pu), St =  85.0 +  52.7j kVA 
+voltage unbalance =  0.45 %
+</title></rect>
+  <rect height="11.630979" id="MV0" width="116.30978" x="-155.0433" y="114.70049" style="fill:#000000" data1="             11364.4 V /      0.98 pu " data2="             11376.6 V /      0.99 pu " data3="             11285.8 V /      0.98 pu " data4="                 0.0 V" data0="bus" data5="                 0.0 kW" data6="                 0.0 kvar" data7="xx" class="tooltip-trigger" transform="rotate(-90)"><title>Voltages:
+Uab = 19999.7 V, 1.00 pu
+Ubc = 19999.7 V, 1.00 pu
+Uca = 19999.7 V, 1.00 pu
+</title></rect>
+  <g id="trafo_MV0_I01_g" transform="matrix(0,-2.3261956,2.3261956,0,79.807545,-125.26326)" style="stroke-width:0.615732">
+    <line stroke="#191928" x1="-100" x2="-100" y1="45" y2="56.235733" id="line178-28" style="stroke:#000000;stroke-width:1.23146"/>
+    <line stroke="#191928" x1="-97" x2="-97" y1="46.510223" y2="56.235733" id="line178-9-5" style="stroke:#000000;stroke-width:1.23146"/>
+    <line stroke="#191928" x1="-94" x2="-94" y1="46.510223" y2="56.235733" id="line178-9-9-7" style="stroke:#000000;stroke-width:1.23146"/>
+    <line stroke="#191928" x1="-91" x2="-91" y1="45.000008" y2="56.235733" id="line178-9-3-6" style="stroke:#000000;stroke-width:1.23146"/>
+    <circle style="font-variation-settings:normal;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.23146;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" id="trafo_MV0_I01_2" cx="-95.5" cy="39.795738" r="6.8800001" data0="trafo" data1="a:  0.81      b:  1.01      c:  1.18       A" data2="a: 58.62     b: 34.69     c: 57.28     n: 28.30      A" data3="" data4="" class="tooltip-trigger"/>
+    <circle style="font-variation-settings:normal;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.23146;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" id="trafo_MV0_I01_1" cx="-95.5" cy="31.977432" r="6.8800001" data0="trafo" data1="a:  0.81      b:  1.01      c:  1.18       A" data2="a: 58.62     b: 34.69     c: 57.28     n: 28.30      A" data3="" data4=""/>
+    <g id="g6550-1" transform="translate(-260.86,-18.764265)" style="stroke-width:0.615732">
+      <line stroke="#191928" x1="162.36" x2="162.36" y1="36.532356" y2="44.55022" id="line178-2-6" style="stroke:#000000;stroke-width:1.23146"/>
+      <line stroke="#191928" x1="165.36" x2="165.36" y1="36.532356" y2="43.861698" id="line178-9-7-9" style="stroke:#000000;stroke-width:1.23146"/>
+      <line stroke="#191928" x1="168.36" x2="168.36" y1="36.532356" y2="44.55022" id="line178-9-9-8-6" style="stroke:#000000;stroke-width:1.23146"/>
+    </g>
+  <title>Currents:
+Ia =    3.0 A	Ia =  148.7 A 
+Ib =    3.0 A	Ib =  148.5 A 
+Ic =    3.0 A	Ic =  148.0 A 
+			  In =    0.4 A 
+</title></g>
+  <path style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.86461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" d="M 117.02668,103.86696 H 65.850373" id="path1117"/>
+  <path style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.86461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" d="M 117.02668,89.909793 H 65.850373" id="path1117-4"/>
+  <path style="font-variation-settings:normal;vector-effect:none;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.86461;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000" d="M 117.02668,96.888373 H 65.850373" id="path1117-4-6"/>
+  <rect style="fill:#eeeeee;stroke:#999999;stroke-width:1.43231;-inkscape-stroke:none" id="src_MV0" width="65.134216" height="62.626602" x="0.71615499" y="65.575104" inkscape:label="#src_MV0"><title>Currents:
+Ia =    3.0 A 
+Ib =    3.0 A 
+Ic =    3.0 A 
+Powers:
+p =   87.1 kW
+q =   54.6 kvar 
+</title></rect>
+</svg>
